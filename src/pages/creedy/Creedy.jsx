@@ -16,6 +16,7 @@ import fifthReviewPhoto from '../../components/assets/img/fifth-review.png';
 import sixthReviewPhoto from '../../components/assets/img/sixth_review.png';
 import Form from "../../components/form/Form";
 import Accordion from "../../components/accordion/accordion";
+import {Link} from 'react-router-dom';
 
 const Creedy = () => {
 
@@ -66,7 +67,9 @@ const Creedy = () => {
         <div className="online_loans" id="online_loans">
           <header className="header">
             <div className="logo_wrap">
-              <img src={logo_img} alt="logo_img" className="logo_img"/>
+              <Link to="/">
+                <img src={logo_img} alt="logo_img" className="logo_img"/>
+              </Link>
             </div>
             <div className="nav">
               <div className="hamburger-menu">
@@ -76,7 +79,7 @@ const Creedy = () => {
                 </label>
                 <ul className="menu">
                   <li className="menu_item" onClick={toggleForm}>
-                    Получить деньги
+                      Получить деньги
                   </li>
                   <li className="menu_item">
                     <a href="#asked_questions_block" className="menu_item">Клиентам</a>
@@ -85,11 +88,11 @@ const Creedy = () => {
                     <a href="#reviews_block" className="menu_item">Отзывы</a>
                   </li>
                   <div className="signin-up-form">
-                    <li className="menu_item" onClick={toggleForm}>
-                      Войти
+                    <li className="menu_item">
+                      <Link to="signin">Войти</Link>
                     </li>
                     <li className="menu_item" onClick={toggleForm}>
-                      Зарегистрироваться
+                      <Link to="signup">Зарегистрироваться</Link>
                     </li>
                   </div>
                 </ul>
@@ -298,7 +301,7 @@ const Creedy = () => {
             </div>
             <div className="apply_for_loan">
               <button className="apply_loan_btn" onClick={toggleForm}>
-                <a href="#online_loans">Оформить заявку</a>
+                <a href="#online_loans" style={{color: "#fff"}}>Оформить заявку</a>
               </button>
             </div>
           </div>
@@ -307,6 +310,7 @@ const Creedy = () => {
     </div>
   )
 }
+
 
 export default Creedy;
 
