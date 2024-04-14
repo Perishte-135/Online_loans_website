@@ -23,7 +23,9 @@ const Creedy = () => {
     {
       id: 1,
       label: 'Реально ли взять кредит под залог, если недвижимость уже заложена?',
-      renderContent: () => <p>То есть заемщик берет у банка кредит на покупку, строительство или ремонт жилья, а в качестве гарантии возврата долга передает свое недвижимое имущество в залог. При оформлении ипотеки можно заложить не только приобретаемую квартиру, но и уже имеющуюся в собственности недвижимость.</p>,
+      renderContent: () => <p>То есть заемщик берет у банка кредит на покупку, строительство или ремонт жилья, а в
+        качестве гарантии возврата долга передает свое недвижимое имущество в залог. При оформлении ипотеки можно
+        заложить не только приобретаемую квартиру, но и уже имеющуюся в собственности недвижимость.</p>,
     },
     {
       id: 2,
@@ -36,7 +38,10 @@ const Creedy = () => {
     {
       id: 3,
       label: 'Какая форма договора используется при залоговом кредитовании?',
-      renderContent: () => <p>Кредитный договор — документ, имеющий юридическую силу и регулирующий финансовые отношения между кредитором (банк, финансовое учреждение, юрлицо) и заемщиком (физлицо, предприятие). В соглашении прописываются основные положения, обязанности сторон и условия предоставления денежных средств, товара или услуги.</p>,
+      renderContent: () => <p>Кредитный договор — документ, имеющий юридическую силу и регулирующий финансовые отношения
+        между кредитором (банк, финансовое учреждение, юрлицо) и заемщиком (физлицо, предприятие). В соглашении
+        прописываются основные положения, обязанности сторон и условия предоставления денежных средств, товара или
+        услуги.</p>,
     },
     {
       id: 4,
@@ -64,17 +69,31 @@ const Creedy = () => {
               <img src={logo_img} alt="logo_img" className="logo_img"/>
             </div>
             <div className="nav">
-              <ul className="menu">
-                <li className="menu_item" onClick={toggleForm}>
-                  Получить деньги
-                </li>
-                <li className="menu_item">
-                  <a href="#asked_questions_block" className="menu_item">Клиентам</a>
-                </li>
-                <li className="menu_item">
-                  <a href="#reviews_block" className="menu_item">Отзывы</a>
-                </li>
-              </ul>
+              <div className="hamburger-menu">
+                <input id="menu__toggle" type="checkbox"/>
+                <label className="menu__btn" htmlFor="menu__toggle">
+                  <span></span>
+                </label>
+                <ul className="menu">
+                  <li className="menu_item" onClick={toggleForm}>
+                    Получить деньги
+                  </li>
+                  <li className="menu_item">
+                    <a href="#asked_questions_block" className="menu_item">Клиентам</a>
+                  </li>
+                  <li className="menu_item">
+                    <a href="#reviews_block" className="menu_item">Отзывы</a>
+                  </li>
+                  <div className="signin-up-form">
+                    <li className="menu_item" onClick={toggleForm}>
+                      Войти
+                    </li>
+                    <li className="menu_item" onClick={toggleForm}>
+                      Зарегистрироваться
+                    </li>
+                  </div>
+                </ul>
+              </div>
             </div>
             <div className="signin-signup_wrap">
               <button className="signin" onClick={toggleForm}>

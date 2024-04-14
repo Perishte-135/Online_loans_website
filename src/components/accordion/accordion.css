@@ -99,3 +99,81 @@ button {
 .accordion .content {
   padding: 10px 15px;
 }
+
+.question_block {
+  flex: 1 0 80%; /* Each block takes up 50% of the width */
+  max-width: 80%;
+}
+
+/* Mobile Version */
+@media all and (min-width: 418px) and (max-width: 450px) {
+  .accordion {
+  width: 300px;
+}
+
+  .question_block div p {
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 280px;
+  }
+
+  .content p {
+    font-weight: 700;
+  }
+
+  .question_block div p:last-child {
+    max-width: 280px;
+  }
+
+  .get_now {
+    font-size: 35px;
+    line-height: 50px;
+  }
+
+  .apply_loan_btn{
+    height: 80px;
+    margin-top: 30px;
+    width: 250px;
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 418px) {
+  .accordion {
+    width: 300px;
+  }
+
+  .question_block div p {
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 280px;
+  }
+
+  .content p {
+    font-weight: 700;
+    max-width: 280px;
+    margin-left: 10px;
+  }
+
+  .question_block div p:last-child {
+    max-width: 280px;
+  }
+
+  .get_now {
+    font-size: 35px;
+    line-height: 50px;
+  }
+
+  .realize_plans {
+    margin-left: 0;
+  }
+
+  .apply_loan_btn{
+    height: 80px;
+    margin-top: 30px;
+    width: 250px;
+    font-size: 20px;
+    margin-left: -30px;
+  }
+}
+/*End of Mobile Version*/

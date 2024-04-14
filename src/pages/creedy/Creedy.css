@@ -16,6 +16,18 @@ a {
   color: white;
 }
 
+@keyframes my-animation {
+  0% {
+    left: -100%;
+  }
+  30% {
+    left: 30%;
+  }
+  50% {
+    left: 50%;
+  }
+}
+
 .online_loans_wrapper {
   width: 100%;
   background: linear-gradient(148deg, #1a1c4f -9%, #000000 32%),
@@ -49,8 +61,12 @@ a {
   height: 18px;
 }
 
-.nav {
-  /*margin-right: 52px;*/
+#menu__toggle {
+  display: none;
+}
+
+.signin-up-form {
+  display: none;
 }
 
 .menu {
@@ -67,7 +83,12 @@ a {
   color: #FFFFFF;
 }
 
-.menu_item:last-child {
+ .menu_icon {
+  display: none;
+  background: url('../../components/assets/icons/free-icon-menu-bar-10233598.png') center center no-repeat;
+  width: 50px;
+  height: 50px;
+   background-size: cover;
 
 }
 
@@ -682,18 +703,839 @@ a {
   animation: my-animation 8s; /* Apply animation */
 }
 
-@keyframes my-animation {
-  0% {
-    left: -100%;
-  }
-  30% {
-    left: 30%;
-  }
-  50% {
-    left: 50%;
-  }
-}
-
 .form-container.show {
   left: 220px; /* Moves the form into view */
 }
+
+/*Adaptive design*/
+/* Mobile Version */
+@media all and (min-width: 418px) and (max-width: 450px) {
+  /*Styles for hamburger menu*/
+
+  #menu__toggle {
+    display: block;
+  }
+
+  .signin-up-form {
+    display: block;
+  }
+
+  #menu__toggle {
+    opacity: 0;
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 50px;
+    left: 25px;
+    width: 26px;
+    height: 26px;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #0009DB;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  .menu {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  }
+  /* элементы меню */
+  .menu_item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .menu_item:hover {
+    background-color: #CFD8DC;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu {
+    visibility: visible;
+    left: 0;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    transition-duration: .25s;
+  }
+  .menu {
+    transition-duration: .25s;
+  }
+  .menu_item {
+    transition-duration: .25s;
+  }
+
+  /*End fo styles for hamburger menu*/
+  body {
+    overflow-x: hidden
+  }
+
+  .container {
+    max-width: 418px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden
+  }
+
+  .online_loans {
+    padding-left: 60px;
+  }
+
+  .header {
+    position: relative;
+    justify-content: flex-start;
+  }
+
+  .menuIconWrap {
+    order: 1;
+    margin-right: 100px;
+    padding-top: 43px
+  }
+
+  .logo_wrap {
+    order: 2;
+    padding-right: 0;
+    margin-left: 150px;
+  }
+
+  .logo_img {
+    width: 100px;
+    height: 40px;
+  }
+
+  .signin-signup_wrap {
+    display: none;
+  }
+
+  .menu_icon {
+    display: block;
+  }
+
+
+  .online_loans_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .online_loans_img {
+    margin-top: 250px;
+    height: 200px;
+    max-width: 300px;
+  }
+
+  .online_loans_img img {
+    width: 340px;
+    height: 200px;
+  }
+
+  .online-loans-title {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 60px;
+  }
+
+  .secured_by_real_estate {
+    font-size: 40px;
+  }
+
+  .new_clients {
+    left: 0;
+    font-size: 25px;
+  }
+
+  .till_amount {
+    left: 0;
+    font-size: 40px;
+    max-width: 280px;
+  }
+
+  .desc {
+    left: 0;
+    font-size: 20px;
+  }
+
+  .get_money {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+  }
+
+  .get_money_form {
+    padding: 60px;
+  }
+
+  .get_money_form h2 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+  .photo {
+    left: 110px;
+    top: 120px;
+  }
+
+  .photo_text {
+    top: 210px;
+    left: 20px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form div {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .form div h3 {
+    font-size: 28px;
+  }
+
+  .general_block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .signup_form input {
+    width: 280px;
+  }
+
+  .input-label {
+    width: 300px;
+    margin-left: 0;
+  }
+
+  .get_money_desc {
+    padding: 0;
+    padding-left: 60px;
+  }
+
+  .get_money_desc p {
+    max-width: 280px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .why_us_block {
+    padding: 0;
+  }
+
+  .why_us_block h3 {
+    margin-left: 60px;
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .overSquare {
+    width: 300px;
+    height: 300px;
+  }
+
+  .underSquare {
+    width: 300px;
+    height: 300px;
+  }
+
+  .general_block {
+    padding-left: 60px;
+  }
+
+  .general_block div:last-child {
+    margin-left: 0;
+  }
+
+  .general_block div h4 {
+    max-width: 300px;
+    line-height: 30px;
+    font-size: 25px;
+  }
+
+  .general_block div p {
+    margin-top: -240px;
+    max-width: 280px;
+    font-size: 18px;
+  }
+
+  .note, .watch, .globe {
+    width: 70px;
+    height: 70px;
+    margin-top: -110px;
+    margin-left: 200px;
+  }
+
+  .reviews_block {
+    padding: 0;
+    padding-left: 60px;
+  }
+
+  .reviews_block h2 {
+    margin-top: 30px;
+    font-size: 30px;
+    line-height: 30px;
+    max-width: 280px;
+  }
+
+  .first_three_reviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .first_three_reviews div {
+    margin-right: 0;
+  }
+
+  .first_three_reviews div img {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+
+  .review {
+    margin-top: -180px;
+    width: 270px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .overElipse {
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-top: -60px;
+    margin-left: 230px;
+  }
+
+  .innerElipse {
+    margin-top: -55px;
+    margin-left: 234px;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+  }
+
+  .polygon {
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    margin-top: -50px;
+    margin-left: 243px;
+  }
+
+  .third_review .review {
+    margin-top: -240px;
+  }
+
+  .second_three_reviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .second_three_reviews div img {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+
+  .asked_questions_block {
+    padding: 60px;
+  }
+
+  .third_review img {
+    height: 189px;
+  }
+
+  .third_review .review {
+    margin-top: -180px;
+  }
+
+  .question_block div p {
+    font-size: 16px;
+    line-height: 28px;
+    width: 280px;
+  }
+
+  .asked_questions_block h2 {
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    max-width: 280px;
+  }
+
+  .apply_for_loan_block {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 418px) {
+
+  #menu__toggle {
+    display: block;
+  }
+
+  /*Styles for hamburger menu*/
+
+  .signin-up-form {
+    display: block;
+  }
+
+  #menu__toggle {
+    opacity: 0;
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    width: 26px;
+    height: 26px;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #0009DB;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  .menu {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  }
+  /* элементы меню */
+  .menu_item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .menu_item:hover {
+    background-color: #CFD8DC;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu {
+    visibility: visible;
+    left: 0;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    transition-duration: .25s;
+  }
+  .menu {
+    transition-duration: .25s;
+  }
+  .menu_item {
+    transition-duration: .25s;
+  }
+
+  /*End fo styles for hamburger menu*/
+
+  .container {
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden
+  }
+
+  .online_loans {
+    padding-left: 20px;
+  }
+
+  .header {
+    position: relative;
+    justify-content: flex-start;
+  }
+
+  .menuIconWrap {
+    order: 1;
+    margin-right: 100px;
+    padding-top: 43px
+  }
+
+  .logo_wrap {
+    order: 2;
+    padding-right: 0;
+    margin-left: 150px;
+  }
+
+  .logo_img {
+    width: 100px;
+    height: 40px;
+  }
+
+
+  .signin-signup_wrap {
+    display: none;
+  }
+
+  .menu_icon {
+    display: block;
+  }
+
+
+  .online_loans_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .online_loans_img {
+    margin-top: 250px;
+    height: 200px;
+    max-width: 300px;
+  }
+
+  .online_loans_img img {
+    width: 340px;
+    height: 200px;
+  }
+
+  .online-loans-title {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 60px;
+  }
+
+  .secured_by_real_estate {
+    font-size: 40px;
+  }
+
+  .new_clients {
+    left: 0;
+    font-size: 25px;
+  }
+
+  .till_amount {
+    left: 0;
+    font-size: 40px;
+    max-width: 280px;
+  }
+
+  .desc {
+    left: 0;
+    font-size: 20px;
+  }
+
+  .get_money {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+  }
+
+  .get_money_form {
+    padding: 20px;
+  }
+
+  .get_money_form h2 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+  .photo {
+    left: 110px;
+    top: 120px;
+  }
+
+  .photo_text {
+    top: 210px;
+    left: 20px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form div {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .form div h3 {
+    font-size: 28px;
+  }
+
+  .general_block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .signup_form input {
+    width: 280px;
+  }
+
+  .input-label {
+    width: 300px;
+    margin-left: 0;
+  }
+
+  .get_money_desc {
+    padding: 0;
+    padding-left: 20px;
+  }
+
+  .get_money_desc p {
+    max-width: 280px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .why_us_block {
+    padding: 0;
+  }
+
+  .why_us_block h3 {
+    margin-left: 20px;
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .overSquare {
+    width: 300px;
+    height: 300px;
+  }
+
+  .underSquare {
+    width: 300px;
+    height: 300px;
+  }
+
+  .general_block {
+    padding-left: 20px;
+  }
+
+  .general_block div:last-child {
+    margin-left: 0;
+  }
+
+  .general_block div h4 {
+    max-width: 300px;
+    line-height: 30px;
+    font-size: 25px;
+  }
+
+  .general_block div p {
+    margin-top: -240px;
+    max-width: 280px;
+    font-size: 18px;
+  }
+
+  .note, .watch, .globe {
+    width: 70px;
+    height: 70px;
+    margin-top: -110px;
+    margin-left: 200px;
+  }
+
+  .reviews_block {
+    padding: 0;
+    padding-left: 20px;
+  }
+
+  .reviews_block h2 {
+    margin-top: 30px;
+    font-size: 30px;
+    line-height: 30px;
+    max-width: 280px;
+  }
+
+  .first_three_reviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .first_three_reviews div {
+    margin-right: 0;
+  }
+
+  .first_three_reviews div img {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+
+  .review {
+    margin-top: -180px;
+    width: 270px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .overElipse {
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-top: -60px;
+    margin-left: 230px;
+  }
+
+  .innerElipse {
+    margin-top: -55px;
+    margin-left: 234px;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+  }
+
+  .polygon {
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    margin-top: -50px;
+    margin-left: 243px;
+  }
+
+  .third_review .review {
+    margin-top: -240px;
+  }
+
+  .second_three_reviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .second_three_reviews div img {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+
+  .asked_questions_block {
+    padding: 20px;
+  }
+
+  .third_review img {
+    height: 189px;
+  }
+
+  .third_review .review {
+    margin-top: -180px;
+  }
+
+  .question_block div p {
+    font-size: 16px;
+    line-height: 28px;
+    width: 280px;
+  }
+
+  .asked_questions_block h2 {
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    max-width: 280px;
+  }
+
+  .apply_for_loan_block {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* End of Mobile Version */
+/*End of style for Adaptive design*/
