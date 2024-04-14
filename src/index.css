@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:global .css-179z3gj-MuiFormLabel-root-MuiInputLabel-root{
+  color: white;
+}
+
+:global(.MuiOutlinedInput-notchedOutline) {
+  border-width: 5px;
+}
