@@ -1,22 +1,46 @@
 import React, {useState} from 'react';
 import './Creedy.css';
-import logo_img from '../assets/img/CREEDY.png';
-import man_img from '../assets/img/1676690582_grizly-club-p-klipart-muzhchina-s-noutbukom-1 1.png';
+import logo_img from '../../components/assets/img/CREEDY.png';
+import man_img from '../../components/assets/img/1676690582_grizly-club-p-klipart-muzhchina-s-noutbukom-1 1.png';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-import photo_docs_img from '../assets/img/Rectangle 13.png';
-import vertical_line from '../assets/img/Line 5.png';
-import underSquare from '../assets/img/Rectangle 13.png';
-import overSquare from '../assets/img/Rectangle 26.png';
-import firstReviewPhoto from '../assets/img/first_review.png';
-import secondReviewPhoto from '../assets/img/second_review.png';
-import thirdReviewPhoto from '../assets/img/third_review.png';
-import fourthReviewPhoto from '../assets/img/fourth_review.png';
-import fifthReviewPhoto from '../assets/img/fifth-review.png';
-import sixthReviewPhoto from '../assets/img/sixth_review.png';
-import Form from "../form/Form";
+import photo_docs_img from '../../components/assets/img/Rectangle 13.png';
+import vertical_line from '../../components/assets/img/Line 5.png';
+import underSquare from '../../components/assets/img/Rectangle 13.png';
+import overSquare from '../../components/assets/img/Rectangle 26.png';
+import firstReviewPhoto from '../../components/assets/img/first_review.png';
+import secondReviewPhoto from '../../components/assets/img/second_review.png';
+import thirdReviewPhoto from '../../components/assets/img/third_review.png';
+import fourthReviewPhoto from '../../components/assets/img/fourth_review.png';
+import fifthReviewPhoto from '../../components/assets/img/fifth-review.png';
+import sixthReviewPhoto from '../../components/assets/img/sixth_review.png';
+import Form from "../../components/form/Form";
+import Accordion from "../../components/accordion/accordion";
 
 const Creedy = () => {
+
+  const data =[
+    {
+      id: 1,
+      label: 'Реально ли взять кредит под залог, если недвижимость уже заложена?',
+      renderContent: () => <p>Lorem ipsum dolore jxgchlivbjskjfvhsukvhlsbfv1</p>,
+    },
+    {
+      id: 2,
+      label: 'Какие документы нужны для получения кредита?',
+      renderContent: () => <p>Lorem ipsum dolore jxgchlivbjskjfvhsukvhlsbfv2</p>,
+    },
+    {
+      id: 3,
+      label: 'Какая форма договора используется при залоговом кредитовании?',
+      renderContent: () => <p>Lorem ipsum dolore jxgchlivbjskjfvhsukvhlsbfv3</p>,
+    },
+    {
+      id: 4,
+      label: 'Какая форма договора используется при залоговом кредитовании?',
+      renderContent: () => <p>Lorem ipsum dolore jxgchlivbjskjfvhsukvhlsbfv4</p>,
+    },
+  ]
   function valuetext(value) {
     return `${value}`;
   }
@@ -241,26 +265,27 @@ const Creedy = () => {
         <div className="container">
           <div className="asked_questions_block" id="asked_questions_block">
             <h2>Часто задаваемые вопросы</h2>
-            <div className="question_block">
-              <div>
-                <p>Реально ли взять кредит под залог, если недвижимость уже заложена?</p>
-                <i className="arrow"></i>
-              </div>
-              <div>
-                <p>Какие документы нужны для получения кредита?</p>
-                <i className="arrow"></i>
-              </div>
-            </div>
-            <div className="question_block">
-              <div>
-                <p>Какая форма договора используется при залоговом кредитовании?</p>
-                <i className="arrow"></i>
-              </div>
-              <div>
-                <p>Какая форма договора используется при залоговом кредитовании?</p>
-                <i className="arrow"></i>
-              </div>
-            </div>
+            <Accordion items={data} keepOthersOpen={false} />
+            {/*<div className="question_block">*/}
+            {/*  <div>*/}
+            {/*    <p>Реально ли взять кредит под залог, если недвижимость уже заложена?</p>*/}
+            {/*    <i className="arrow"></i>*/}
+            {/*  </div>*/}
+            {/*  <div>*/}
+            {/*    <p>Какие документы нужны для получения кредита?</p>*/}
+            {/*    <i className="arrow"></i>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
+            {/*<div className="question_block">*/}
+            {/*  <div>*/}
+            {/*    <p>Какая форма договора используется при залоговом кредитовании?</p>*/}
+            {/*    <i className="arrow"></i>*/}
+            {/*  </div>*/}
+            {/*  <div>*/}
+            {/*    <p>Какая форма договора используется при залоговом кредитовании?</p>*/}
+            {/*    <i className="arrow"></i>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
           </div>
           <div className="apply_for_loan_block">
             <div className="get_now_loan">

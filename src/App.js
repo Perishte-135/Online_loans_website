@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Creedy from './components/creedy/Creedy';
+import Creedy from './pages/creedy/Creedy';
 
 function App() {
   return (

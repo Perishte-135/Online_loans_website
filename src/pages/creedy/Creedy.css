@@ -327,7 +327,7 @@ a {
   left: 160px;
   top: 104.12px;
   display: block;
-  background: url('../assets/icons/camera.svg');
+  background: url('../../components/assets/icons/camera.svg');
   width: 97.23px;
   height: 99.51px;
 }
@@ -485,7 +485,7 @@ a {
 .note {
   position: absolute;
   display: block;
-  background: url('../assets/icons/clipboard-check.svg') center center no-repeat;
+  background: url('../../components/assets/icons/clipboard-check.svg') center center no-repeat;
   width: 81.41px;
   height: 81.41px;
   z-index: 2;
@@ -496,7 +496,7 @@ a {
 .watch {
   position: absolute;
   display: block;
-  background: url('../assets/icons/Component 3.svg')center center no-repeat;
+  background: url('../../components/assets/icons/Component 3.svg')center center no-repeat;
   width: 64.94px;
   height: 58.15px;
   z-index: 2;
@@ -507,7 +507,7 @@ a {
 .globe {
   position: absolute;
   display: block;
-  background: url('../assets/icons/Component 1.svg') center center no-repeat;
+  background: url('../../components/assets/icons/Component 1.svg') center center no-repeat;
   width: 60.09px;
   height: 60.09px;
   z-index: 2;
@@ -578,7 +578,7 @@ a {
 
 .overElipse {
   display: block;
-  background: url('../assets/icons/Ellipse 21.svg') center center no-repeat;
+  background: url('../../components/assets/icons/Ellipse 21.svg') center center no-repeat;
   width: 62px;
   height: 62px;
   position: absolute;
@@ -589,7 +589,7 @@ a {
 
 .innerElipse {
   display: block;
-  background: url('../assets/icons/Ellipse 27.svg') center center no-repeat;
+  background: url('../../components/assets/icons/Ellipse 27.svg') center center no-repeat;
   width: 52px;
   height: 52px;
   position: absolute;
@@ -600,7 +600,7 @@ a {
 
 .polygon {
   display: block;
-  background: url('../assets/icons/Polygon 1.svg') center center no-repeat;
+  background: url('../../components/assets/icons/Polygon 1.svg') center center no-repeat;
   width: 36px;
   height: 36px;
   position: absolute;
@@ -657,7 +657,7 @@ a {
 
 .arrow {
   display: block;
-  background: url('../assets/icons/Polygon 11.svg') center center no-repeat;
+  background: url('../../components/assets/icons/Polygon 11.svg') center center no-repeat;
   width: 30px;
   height: 30px;
 }
