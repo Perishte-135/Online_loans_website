@@ -1,5 +1,5 @@
 * {
-  margin: 0 ;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -94,9 +94,4 @@ body {
   font-size: 52.15px;
   line-height: 73.48px;
   color: #FFFFFF;
-}
-
-
-:global(.MuiOutlinedInput-notchedOutline) {
-  border-width: 5px;
 }

@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import './accordion.css';
 
 
@@ -6,7 +6,7 @@ const Accordion = ({items, keepOthersOpen}) => {
   const [accordionItems, setAccordionItems] = useState(null);
 
   useEffect(() => {
-    if(items) {
+    if (items) {
       setAccordionItems([
         ...items.map(item => ({
           ...item,
@@ -20,9 +20,9 @@ const Accordion = ({items, keepOthersOpen}) => {
     setAccordionItems([
       ...accordionItems.map((item) => {
         let toggled = item.toggled;
-        if(clickedItem.id === item.id) {
+        if (clickedItem.id === item.id) {
           toggled = !item.toggled
-        } else if(!keepOthersOpen) {
+        } else if (!keepOthersOpen) {
           toggled = false;
         }
 
@@ -33,17 +33,21 @@ const Accordion = ({items, keepOthersOpen}) => {
       })
     ])
   }
-  return(
+  return (
     <div className="accordion_wrapper">
       {accordionItems?.map((listItem, key) => {
-        return(
-          <div className={`accordion ${listItem.toggled? 'toggled' : ''}`} key={key}>
-            <button className="toggle" onClick={() => handleAccordionToggle(listItem)}>
-              <p>{listItem.label}</p>
-              <div className="direction-indicator">{listItem.toggled? '-' : '+'}</div>
-            </button>
-            <div className="content-parent">
-              <div className="content">{listItem.renderContent()}</div>
+        return (
+          <div className="question_block">
+            <div className={`accordion ${listItem.toggled ? 'toggled' : ''}`} key={key}>
+              <button className="toggle" onClick={() => handleAccordionToggle(listItem)}>
+                <p style={{width: '526px'}}>{listItem.label}</p>
+                <div className="direction-indicator">
+                  <i className="arrow">{listItem.toggled}</i>
+                </div>
+              </button>
+              <div className="content-parent">
+                <div className="content">{listItem.renderContent()}</div>
+              </div>
             </div>
           </div>
         )

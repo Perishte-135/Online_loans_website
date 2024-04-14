@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './Form.css';
 import TextField from '@mui/material/TextField';
 import {inputLabelClasses} from "@mui/material/InputLabel";
+
 const Form = ({showForm}) => {
   return (
     <div className={`form_wrap ${showForm ? 'visible' : ''}`}>
@@ -18,7 +19,7 @@ const Form = ({showForm}) => {
                 id="field"
                 sx={{borderWidth: '5px'}}
                 InputProps={{
-                 borderWidth: '5px'
+                  borderWidth: '5px'
                 }}
                 InputLabelProps={{
                   sx: {
@@ -246,9 +247,9 @@ const Form = ({showForm}) => {
               />
             </div>
           </div>
-        <div className="btn_wrap">
-          <button className="form_btn">Получить деньги</button>
-        </div>
+          <div className="btn_wrap">
+            <button className="form_btn">Получить деньги</button>
+          </div>
         </div>
       </div>
     </div>
@@ -256,3 +257,4 @@ const Form = ({showForm}) => {
 }
 
 export default Form;
+

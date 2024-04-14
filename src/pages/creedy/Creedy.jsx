@@ -19,31 +19,36 @@ import Accordion from "../../components/accordion/accordion";
 
 const Creedy = () => {
 
-  const data =[
+  const data = [
     {
       id: 1,
       label: 'Реально ли взять кредит под залог, если недвижимость уже заложена?',
-      renderContent: () => <p>Lorem ipsum dolore jxgchlivbjskjfvhsukvhlsbfv1</p>,
+      renderContent: () => <p>То есть заемщик берет у банка кредит на покупку, строительство или ремонт жилья, а в качестве гарантии возврата долга передает свое недвижимое имущество в залог. При оформлении ипотеки можно заложить не только приобретаемую квартиру, но и уже имеющуюся в собственности недвижимость.</p>,
     },
     {
       id: 2,
       label: 'Какие документы нужны для получения кредита?',
-      renderContent: () => <p>Lorem ipsum dolore jxgchlivbjskjfvhsukvhlsbfv2</p>,
+      renderContent: () => <p>Удостоверение личности. Первым и главным в списке является паспорт РФ. ...
+        Подтверждение платежеспособности. ...
+        Подтверждение трудовой занятости. ...
+        Документы на залог.</p>,
     },
     {
       id: 3,
       label: 'Какая форма договора используется при залоговом кредитовании?',
-      renderContent: () => <p>Lorem ipsum dolore jxgchlivbjskjfvhsukvhlsbfv3</p>,
+      renderContent: () => <p>Кредитный договор — документ, имеющий юридическую силу и регулирующий финансовые отношения между кредитором (банк, финансовое учреждение, юрлицо) и заемщиком (физлицо, предприятие). В соглашении прописываются основные положения, обязанности сторон и условия предоставления денежных средств, товара или услуги.</p>,
     },
     {
       id: 4,
-      label: 'Какая форма договора используется при залоговом кредитовании?',
-      renderContent: () => <p>Lorem ipsum dolore jxgchlivbjskjfvhsukvhlsbfv4</p>,
+      label: 'Каковы сроки кредитования под залог?',
+      renderContent: () => <p>Кредит под залог недвижимости можно взять на срок от одного года до 10 лет.</p>,
     },
   ]
+
   function valuetext(value) {
     return `${value}`;
   }
+
   const [showForm, setShowForm] = useState(false);
 
   const toggleForm = () => {
@@ -72,10 +77,10 @@ const Creedy = () => {
               </ul>
             </div>
             <div className="signin-signup_wrap">
-              <button className="signin" onClick={toggleForm} >
+              <button className="signin" onClick={toggleForm}>
                 {showForm &&
                   <div className={`form-container ${showForm ? "show" : ""}`}>
-                     <Form />
+                    <Form/>
                   </div>
                 }
                 Войти
@@ -265,27 +270,7 @@ const Creedy = () => {
         <div className="container">
           <div className="asked_questions_block" id="asked_questions_block">
             <h2>Часто задаваемые вопросы</h2>
-            <Accordion items={data} keepOthersOpen={false} />
-            {/*<div className="question_block">*/}
-            {/*  <div>*/}
-            {/*    <p>Реально ли взять кредит под залог, если недвижимость уже заложена?</p>*/}
-            {/*    <i className="arrow"></i>*/}
-            {/*  </div>*/}
-            {/*  <div>*/}
-            {/*    <p>Какие документы нужны для получения кредита?</p>*/}
-            {/*    <i className="arrow"></i>*/}
-            {/*  </div>*/}
-            {/*</div>*/}
-            {/*<div className="question_block">*/}
-            {/*  <div>*/}
-            {/*    <p>Какая форма договора используется при залоговом кредитовании?</p>*/}
-            {/*    <i className="arrow"></i>*/}
-            {/*  </div>*/}
-            {/*  <div>*/}
-            {/*    <p>Какая форма договора используется при залоговом кредитовании?</p>*/}
-            {/*    <i className="arrow"></i>*/}
-            {/*  </div>*/}
-            {/*</div>*/}
+            <Accordion items={data} keepOthersOpen={false}/>
           </div>
           <div className="apply_for_loan_block">
             <div className="get_now_loan">
@@ -305,3 +290,4 @@ const Creedy = () => {
 }
 
 export default Creedy;
+
