@@ -714,6 +714,146 @@ a {
 /*Adaptive design*/
 /*Laptop Version Styles*/
 
+@media all and (min-width: 769px) and (max-width: 1024px) {
+   .container {
+     max-width: 765px;
+     width: 100%;
+     margin: 0 auto;
+   }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .online_loans_block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .general_block {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+  }
+
+  .general_block div:last-child {
+    margin-left: 0;
+  }
+
+  .first_three_reviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .first_three_reviews div {
+    margin-bottom: 30px;
+  }
+
+  .second_three_reviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .second_three_reviews div {
+    margin-bottom: 30px;
+  }
+
+  .apply_loan_btn {
+    margin-top: 80px;
+  }
+
+  .reviews_block  {
+    padding: 42px 180px 70px;
+  }
+
+  .reviews_block h2 {
+    font-size: 70px;
+  }
+
+  .apply_for_loan_block {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .asked_questions_block h2 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  .question_block div p {
+    font-size: 28px;
+  }
+
+
+  .menu {
+    padding-top: 0;
+  }
+
+  .get_now {
+    font-size: 70px;
+  }
+
+  .online_loans_title {
+    order: 1;
+  }
+
+  .online_loans_desc {
+    order: 2;
+    margin-left: 100px;
+  }
+
+  .online_loans_img {
+    order: 3;
+    margin-top: 270px;
+    width: 500px;
+    height: 500px;
+  }
+
+  .online_loans_img img {
+    width: 500px;
+    height: 500px;
+  }
+
+  .get_money_form {
+    padding: 65px 180px 0;
+    text-align: center;
+  }
+
+  .get_money_form h2 {
+    font-size: 70px;
+  }
+
+  .get_money_desc {
+    padding: 0;
+  }
+
+  .why_us_block h3 {
+    font-size: 70px;
+  }
+
+  .new_clients {
+    left: 0;
+  }
+
+  .till_amount {
+    left: 0;
+  }
+
+  .desc {
+    left: 0;
+  }
+}
+/*End of Laptop Version styles*/
+
+/*Tablet Version Styles*/
+
 @media all and (min-width: 585px) and (max-width: 768px) {
   .container {
     max-width: 590px;
@@ -894,7 +1034,7 @@ a {
   }
 }
 
-/*End of Laptop Version  Styles*/
+/*End of Tablet Version  Styles*/
 
 /* Mobile Version */
 @media all and (min-width: 418px) and (max-width: 450px) {
