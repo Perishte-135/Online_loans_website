@@ -40,7 +40,7 @@ const Accordion = ({items, keepOthersOpen}) => {
           <div className="question_block">
             <div className={`accordion ${listItem.toggled ? 'toggled' : ''}`} key={key}>
               <button className="toggle" onClick={() => handleAccordionToggle(listItem)}>
-                <p style={{width: '526px'}}>{listItem.label}</p>
+                <p>{listItem.label}</p>
                 <div className="direction-indicator">
                   <i className="arrow">{listItem.toggled}</i>
                 </div>
