@@ -28,7 +28,7 @@ a {
     left: 30%;
   }
   50% {
-    left: 50%;
+    left: 60%;
   }
 }
 
@@ -329,7 +329,6 @@ a {
 .signup_form input::placeholder {
   padding: 0 0 8.01px 8.93px;
   color: #FFFFFF;
-  /*opacity: 1;*/
 }
 
 .take_photo_docs {
@@ -396,7 +395,6 @@ a {
 }
 
 .input-label span {
-  /*opacity: 1;*/
   color: #FFFFFF;
 }
 
@@ -466,7 +464,6 @@ a {
   height: 323.71px;
   z-index: 1;
   margin-top: 65.32px;
-  /*padding: 28.11px 10.66px 11.63px 19.38px;*/
 }
 
 .general_block div:first-child {
@@ -547,7 +544,6 @@ a {
 
 .reviews_block_wrapper {
   width: 100%;
-  /*background: linear-gradient(179deg, #1a1c4f 0.05%, #000000 139%);*/
   background: linear-gradient(179.95deg, #000000 0.05%, #1A1C4F 139.06%);
 }
 
@@ -699,26 +695,36 @@ a {
 
 /*End of styles apply for loan block*/
 
+
+.form_wrap.visible {
+  max-width: 949px;
+  width: 100%;
+  left: 50%; /* Move to center */
+  transform: translateX(-50%);
+}
+
 .form-container {
   position: absolute;
   left: -100%; /* Initially off-screen to the left */
-  transition: left 2s ease; /* Smooth transition effect */
+  transition: transform 0.5s ease; /* Smooth transition effect on transform */
   z-index: 1;
   animation: my-animation 8s; /* Apply animation */
 }
 
 .form-container.show {
-  left: 220px; /* Moves the form into view */
+  left: 220px; /* Moves the form into view using transform */
 }
 
 /*Adaptive design*/
 /*Laptop Version Styles*/
 
 @media all and (min-width: 769px) and (max-width: 1024px) {
+
    .container {
      max-width: 765px;
      width: 100%;
      margin: 0 auto;
+     overflow-x: hidden;
    }
 
   .header {
@@ -791,6 +797,16 @@ a {
     font-size: 28px;
   }
 
+  .accordion_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .question_block {
+    flex: 1 0 80%; /* Each block takes up 50% of the width */
+    max-width: 80%;
+  }
+
 
   .menu {
     padding-top: 0;
@@ -855,10 +871,12 @@ a {
 /*Tablet Version Styles*/
 
 @media all and (min-width: 585px) and (max-width: 768px) {
+
   .container {
     max-width: 590px;
     width: 100%;
     margin: 0 auto;
+    overflow-x: hidden;
   }
 
   .header {
@@ -989,7 +1007,7 @@ a {
   .apply_for_loan_block {
     display: flex;
     flex-direction: column;
-    padding: 0 30px 30px 30px;
+    padding: 0 40px 30px 80px;
   }
 
   .get_now {
@@ -1002,11 +1020,21 @@ a {
   }
 
   .question_block div {
-    width: 400px;
+    width: 420px;
   }
 
   .question_block div p {
     width: 360px;
+  }
+
+  .accordion_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .question_block {
+    flex: 1 0 80%; /* Each block takes up 50% of the width */
+    max-width: 80%;
   }
 
   .menu {
@@ -1038,6 +1066,7 @@ a {
 
 /* Mobile Version */
 @media all and (min-width: 418px) and (max-width: 450px) {
+
   /*Styles for hamburger menu*/
   #menu__toggle {
     display: block;
@@ -1441,9 +1470,9 @@ a {
   }
 
   .question_block div p {
-    font-size: 16px;
     line-height: 28px;
-    width: 280px;
+    font-size: 16px;
+    max-width: 240px;
   }
 
   .asked_questions_block h2 {
@@ -1458,9 +1487,25 @@ a {
     display: flex;
     flex-direction: column;
   }
+
+  .accordion_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .question_block {
+    flex: 1 0 80%; /* Each block takes up 50% of the width */
+    max-width: 80%;
+  }
+
+  .question_block div p {
+    font-size: 16px;
+    max-width: 240px;
+  }
 }
 
 @media all and (max-width: 418px) {
+
 
   #menu__toggle {
     display: block;

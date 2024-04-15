@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Creedy.css';
 import logo_img from '../../components/assets/img/CREEDY.png';
 import man_img from '../../components/assets/img/1676690582_grizly-club-p-klipart-muzhchina-s-noutbukom-1 1.png';
@@ -51,14 +51,15 @@ const Creedy = () => {
     },
   ]
 
-  function valuetext(value) {
-    return `${value}`;
-  }
 
   const [showForm, setShowForm] = useState(false);
 
-  const toggleForm = () => {
-    setShowForm(!showForm);
+  const showFormFunc = () => {
+    setShowForm(true);
+  };
+
+  const hideForm = (e) => {
+    setShowForm(false);
   };
 
   return (
@@ -67,9 +68,7 @@ const Creedy = () => {
         <div className="online_loans" id="online_loans">
           <header className="header">
             <div className="logo_wrap">
-              <Link to="/">
-                <img src={logo_img} alt="logo_img" className="logo_img"/>
-              </Link>
+                <img src={logo_img} alt="logo_img" className="logo_img" onClick={hideForm}/>
             </div>
             <div className="nav">
               <div className="hamburger-menu">
@@ -78,7 +77,12 @@ const Creedy = () => {
                   <span></span>
                 </label>
                 <ul className="menu">
-                  <li className="menu_item" onClick={toggleForm}>
+                  <li className="menu_item" onClick={showFormFunc}>
+                    {showForm &&
+                      <div className={`form-container ${showForm ? "show" : ""}`}>
+                        <Form />
+                      </div>
+                    }
                       Получить деньги
                   </li>
                   <li className="menu_item">
@@ -91,7 +95,7 @@ const Creedy = () => {
                     <li className="menu_item">
                       <Link to="signin">Войти</Link>
                     </li>
-                    <li className="menu_item" onClick={toggleForm}>
+                    <li className="menu_item" onClick={showFormFunc}>
                       <Link to="signup">Зарегистрироваться</Link>
                     </li>
                   </div>
@@ -99,15 +103,10 @@ const Creedy = () => {
               </div>
             </div>
             <div className="signin-signup_wrap">
-              <button className="signin" onClick={toggleForm}>
-                {showForm &&
-                  <div className={`form-container ${showForm ? "show" : ""}`}>
-                    <Form/>
-                  </div>
-                }
+              <button className="signin" onClick={showFormFunc}>
                 Войти
               </button>
-              <button className="signup" onClick={toggleForm}>
+              <button className="signup" onClick={showFormFunc}>
                 Зарегистрироваться
               </button>
             </div>
@@ -130,7 +129,6 @@ const Creedy = () => {
                       valueLabelDisplay="auto"
                       min={10000}
                       max={500000}
-                      getAriaValueText={valuetext}
                     />
                   </Box>
                   <p className="term">Срок</p>
@@ -141,7 +139,7 @@ const Creedy = () => {
                   </div>
                 </div>
                 <div className="get_money_button">
-                  <button onClick={toggleForm}>
+                  <button onClick={showFormFunc}>
                     Получить деньги
                   </button>
                 </div>
@@ -300,7 +298,7 @@ const Creedy = () => {
                 <span className="realize_plans">реализуйте свои планы </span></h2>
             </div>
             <div className="apply_for_loan">
-              <button className="apply_loan_btn" onClick={toggleForm}>
+              <button className="apply_loan_btn" onClick={showFormFunc}>
                 <a href="#online_loans" style={{color: "#fff"}}>Оформить заявку</a>
               </button>
             </div>
@@ -313,4 +311,7 @@ const Creedy = () => {
 
 
 export default Creedy;
+
+
+
 

@@ -17,10 +17,6 @@ const Form = ({showForm}) => {
                 defaultValue="Иван"
                 color="secondary"
                 id="field"
-                sx={{borderWidth: '5px'}}
-                InputProps={{
-                  borderWidth: '5px'
-                }}
                 InputLabelProps={{
                   sx: {
                     // set the color of the label when not shrinked
