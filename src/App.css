@@ -1,3 +1,7 @@
 .wrapper {
   width: 100%;
 }
+
+:global .MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border-width: 5px;
+}

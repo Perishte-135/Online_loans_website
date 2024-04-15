@@ -108,7 +108,7 @@ a {
 .menu_item:hover {
   transition: all 0.5s;
   cursor: pointer;
-   color: cadetblue;
+  color: cadetblue;
   font-weight: 900;
 }
 
@@ -176,7 +176,7 @@ a {
 
 .online_loans_img img:hover {
   transform: scale(1.2);
-  transition: all  .5s;
+  transition: all .5s;
 }
 
 
@@ -200,7 +200,7 @@ a {
   width: 624px;
   background: rgba(0, 4, 80, 1);
   border-radius: 20px;
-  /*opacity: 80%;*/
+  opacity: 80%;
   padding: 0 20px 29px 20px;
 }
 
@@ -403,8 +403,6 @@ a {
   padding: 16px 0 26.75px;
   background: linear-gradient(0deg, #000000, #000000),
   linear-gradient(180.12deg, #060717 0.1%, #11166B 107.71%);
-
-
 }
 
 .take_photo_docs h3 {
@@ -455,6 +453,7 @@ a {
   margin-top: 18.07px;
   margin-left: 20.83px;
   padding: 17px 15px 20px 12.97px;
+  color: white;
 }
 
 .input-label:last-child {
@@ -518,8 +517,8 @@ a {
 }
 
 .no_change_owner:hover {
-   transform: translateX(50px);
-   transition: all 0.5s;
+  transform: translateX(50px);
+  transition: all 0.5s;
 }
 
 .fast_get_loan:hover {
@@ -626,8 +625,7 @@ a {
 
 .reviews_block_wrapper {
   width: 100%;
-  background:
-  linear-gradient(179deg, #000000 0.05%, #1A1C4F 139%);
+  background: linear-gradient(179deg, #000000 0.05%, #1A1C4F 139%);
 
 }
 
@@ -819,7 +817,6 @@ a {
 }
 
 
-
 .apply_loan_btn:hover {
   transform: scale(1.2);
   transition: all .5s;
@@ -853,12 +850,12 @@ a {
 
 @media all and (min-width: 769px) and (max-width: 1024px) {
 
-   .container {
-     max-width: 765px;
-     width: 100%;
-     margin: 0 auto;
-     overflow-x: hidden;
-   }
+  .container {
+    max-width: 765px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
 
   .header {
     display: flex;
@@ -907,7 +904,7 @@ a {
     margin-top: 80px;
   }
 
-  .reviews_block  {
+  .reviews_block {
     padding: 42px 180px 70px;
   }
 
@@ -999,6 +996,7 @@ a {
     left: 0;
   }
 }
+
 /*End of Laptop Version styles*/
 
 /*Tablet Version Styles*/
