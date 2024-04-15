@@ -180,6 +180,17 @@ a {
   line-height: 48.45px;
 }
 
+.term_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.termValue {
+  font-size: 35px;
+  margin-right: 40px;
+}
+
 .specific_term {
   display: flex;
   margin-top: 10px;
@@ -204,6 +215,10 @@ a {
 .specific_term button:last-child {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.specific_term button:hover {
+  border: 3px deepskyblue solid;
 }
 
 .get_money_button button {
