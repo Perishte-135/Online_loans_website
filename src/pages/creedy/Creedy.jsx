@@ -307,7 +307,7 @@ const Creedy = () => {
             <div className="apply_for_loan_block">
               <div className="get_now_loan">
                 <h2 className="get_now">Получить займ прямо сейчас!
-                  <span className="realize_plans">реализуйте свои планы </span></h2>
+                  <span className="realize_plans" style={{width: '150px'}}>реализуйте свои планы </span></h2>
               </div>
               <div className="apply_for_loan">
                 <button className="apply_loan_btn" onClick={showFormFunc}>

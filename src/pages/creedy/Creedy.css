@@ -32,6 +32,24 @@ a {
   }
 }
 
+@keyframes rotate_loan {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  25% {
+    transform: rotate3d(0, 0, 1, 90deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  75% {
+    transform: rotate3d(0, 0, 1, 270deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
 .online_loans_wrapper {
   width: 100%;
   background: linear-gradient(148deg, #1a1c4f -9%, #000000 32%),
@@ -87,6 +105,13 @@ a {
   color: #FFFFFF;
 }
 
+.menu_item:hover {
+  transition: all 0.5s;
+  cursor: pointer;
+   color: cadetblue;
+  font-weight: 900;
+}
+
 .menu_icon {
   display: none;
   background: url('../../components/assets/icons/free-icon-menu-bar-10233598.png') center center no-repeat;
@@ -125,6 +150,20 @@ a {
   line-height: 37px;
 }
 
+.signin:hover {
+  transition: all 0.5s;
+  cursor: pointer;
+  color: cadetblue;
+  font-weight: 900;
+}
+
+.signup:hover {
+  transition: all 0.5s;
+  cursor: pointer;
+  color: cadetblue;
+  font-weight: 900;
+}
+
 .online_loans_block {
   display: flex;
   justify-content: space-between;
@@ -134,6 +173,12 @@ a {
   width: 632px;
   height: 613px;
 }
+
+.online_loans_img img:hover {
+  transform: scale(1.2);
+  transition: all  .5s;
+}
+
 
 .online-loans-title {
   font-weight: 700;
@@ -248,6 +293,13 @@ a {
   width: 310px;
   left: -160px;
   top: 30px;
+}
+
+.get_money_button button:hover {
+  transform: scaleX(1.2);
+  transition: all .5s;
+  font-weight: 900;
+  font-size: 26px;
 }
 
 @font-face {
@@ -465,6 +517,21 @@ a {
   justify-content: space-between;
 }
 
+.no_change_owner:hover {
+   transform: translateX(50px);
+   transition: all 0.5s;
+}
+
+.fast_get_loan:hover {
+  transform: translateX(50px);
+  transition: all 0.5s;
+}
+
+.no_visit_to_office:hover {
+  transform: translateX(50px);
+  transition: all 0.5s;
+}
+
 .underSquare {
   position: relative;
   width: 373.14px;
@@ -559,7 +626,9 @@ a {
 
 .reviews_block_wrapper {
   width: 100%;
-  background: linear-gradient(179.95deg, #000000 0.05%, #1A1C4F 139.06%);
+  background:
+  linear-gradient(179deg, #000000 0.05%, #1A1C4F 139%);
+
 }
 
 .reviews_block {
@@ -577,6 +646,42 @@ a {
   display: flex;
   margin-bottom: 24px;
   position: relative;
+}
+
+.first_review:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+  filter: brightness(150%);
+}
+
+.second_review:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+  filter: brightness(150%);
+}
+
+.third_review:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+  filter: brightness(150%);
+}
+
+.fourth_review:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+  filter: brightness(150%);
+}
+
+.fifth_review:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+  filter: brightness(150%);
+}
+
+.sixth_review:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+  filter: brightness(150%);
 }
 
 .second_three_reviews {
@@ -652,12 +757,12 @@ a {
 
 .asked_questions_wrapper {
   width: 100%;
-  background: radial-gradient(circle, rgba(35, 39, 105, 1) 60%, rgba(0, 0, 0, 1) 60%);
+  background: radial-gradient(43.66% 50% at 50% 50%, rgba(35, 39, 105, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
 }
 
 .asked_questions_block {
   text-align: center;
-  background: #000000;
+  background: radial-gradient(43.66% 50% at 50% 50%, rgba(35, 39, 105, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
   padding: 0 78px 225px 88px;
 }
 
@@ -674,7 +779,6 @@ a {
 .apply_for_loan_block {
   display: flex;
   justify-content: space-between;
-  background: #000000;
   padding: 0 78px 225px 90px;
 }
 
@@ -696,6 +800,12 @@ a {
   color: transparent;
 }
 
+.get_now:hover {
+  transform: scale(0.7);
+  animation: rotate_loan 5s normal linear infinite;
+}
+
+
 .apply_loan_btn {
   padding: 29px 0 42px;
   width: 445px;
@@ -706,6 +816,14 @@ a {
   color: rgba(255, 255, 255, 1);
   font-size: 43px;
   line-height: 35px;
+}
+
+
+
+.apply_loan_btn:hover {
+  transform: scale(1.2);
+  transition: all .5s;
+  font-weight: 900;
 }
 
 /*End of styles apply for loan block*/
